@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-storage.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Content</h2>
+        <form id="upload-form">
+            <div class="input-container">
+                <label for="text-content">Text</label>
+                <textarea id="text-content" name="text-content" required></textarea>
+            </div>
+            <div class="input-container">
+                <label for="image">Image</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+            </div>
+            <button type="submit">Upload</button>
+            <div id="upload-message" class="error-message"></div>
+        </form>
+    </div>
+
+    <script src="upload.js"></script>
+</body>
+</html>
